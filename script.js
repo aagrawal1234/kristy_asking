@@ -67,9 +67,15 @@ document.querySelector('#question-5 .correct-answer').addEventListener('click', 
     document.getElementById('question-6').classList.remove('hidden');
 });
 
-// Question 6 to game
+// Question 6 to 7
 document.querySelector('#question-6 .correct-answer').addEventListener('click', () => {
     document.getElementById('question-6').classList.add('hidden');
+    document.getElementById('question-7').classList.remove('hidden');
+});
+
+// Question 7 to game
+document.querySelector('#question-7 .correct-answer').addEventListener('click', () => {
+    document.getElementById('question-7').classList.add('hidden');
     document.getElementById('game-container').classList.remove('hidden');
     const game = new HeartCatcherGame(10);
     game.start();
